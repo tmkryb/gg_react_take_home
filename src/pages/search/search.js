@@ -25,10 +25,11 @@ export function SearchComponent({ }) {
     
 
     return (<>
+        <h5>Search</h5>
         <InputGroup size="lg">
             <InputGroupAddon addonType="prepend"><Button><FaSearch></FaSearch></Button></InputGroupAddon>
             <Input defaultValue={searchQuery.q} onKeyUp={(e) => {doSearch(e.target.value)}}></Input>
-        </InputGroup>
+        </InputGroup>        
         <ImageGrid giphs={downloadedGifs} isLoadingGifs={isLoadingGifs}></ImageGrid>
     </>);
 }

@@ -6,7 +6,7 @@ export function GiphDetail({ giph }) {
     return (
         <>
             <div className="centered">
-                <GiphTile title={giph.title} tileClicked={() => { }} giphImage={giph.images.original}></GiphTile>
+                <GiphTile giph={giph} title={giph.title} tileClicked={() => { }} giphImage={giph.images.original}></GiphTile>
             </div>
             <br></br>
             <Card>
@@ -23,7 +23,7 @@ export function GiphDetail({ giph }) {
                             Source:
                     </Col>
                         <Col md="4">
-                            <a target="_blank" href={giph.source ? giph.source : 'no source'}>/{giph.source}</a>
+                            <a target="_blank" href={giph.source ? giph.source : 'no source'}>{giph.source}</a>
                         </Col>
                     </Row>
                     <Row>

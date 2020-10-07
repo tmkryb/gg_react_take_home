@@ -20,3 +20,17 @@ code {
 .full-height{
   height: 100%
 }
+
+.centered-element {
+  height: 100px;
+  width: 120px;
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+  bottom: -40px;  
+}
+
+.tile-button{
+  width: 40px;
+  height: 40px;
+}

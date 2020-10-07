@@ -15,6 +15,7 @@ export function TrendingComponent({ }) {
     });
 
     return (<>
+        <h5>Trending</h5>
         <ImageGrid giphs={downloadedGifs} isLoadingGifs={isLoadingGifs}></ImageGrid>
     </>);
 }
