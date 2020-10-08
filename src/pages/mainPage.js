@@ -1,15 +1,15 @@
 import React from 'react';
 import { Navbar, Nav, NavItem, NavLink, NavbarBrand } from 'reactstrap';
 import { Routing } from '../routes';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { HashRouter, Link } from 'react-router-dom';
 import { FiTrendingUp, FiStar } from 'react-icons/fi';
 import { FaSearch } from 'react-icons/fa'
 export function MainPage() {
     return (
         <>
-            <BrowserRouter>
+            <HashRouter basename={process.env.REACT_APP_BASE_URL}>
                 <Navbar>
-                    <NavbarBrand href="/">giphy_search!</NavbarBrand>
+                    <NavbarBrand href={process.env.REACT_APP_BASE_URL}>giphy_search!</NavbarBrand>
                     <Nav className="mr-auto">
                         <NavItem>
                             <NavLink><Link to="/trending/"><FiTrendingUp></FiTrendingUp> Trending</Link></NavLink>
@@ -23,7 +23,7 @@ export function MainPage() {
                     </Nav>
                 </Navbar>
                 <Routing></Routing>
-            </BrowserRouter>
+            </HashRouter>
         </>
     )
 }
