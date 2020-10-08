@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/gg_react_take_home/static/css/main.95bc8d7d.chunk.css",
+    "main.js": "/gg_react_take_home/static/js/main.68d0f31b.chunk.js",
+    "main.js.map": "/gg_react_take_home/static/js/main.68d0f31b.chunk.js.map",
+    "runtime-main.js": "/gg_react_take_home/static/js/runtime-main.42d4d1f8.js",
+    "runtime-main.js.map": "/gg_react_take_home/static/js/runtime-main.42d4d1f8.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/gg_react_take_home/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.d2c0dd0b.chunk.js": "/gg_react_take_home/static/js/2.d2c0dd0b.chunk.js",
+    "static/js/2.d2c0dd0b.chunk.js.map": "/gg_react_take_home/static/js/2.d2c0dd0b.chunk.js.map",
+    "index.html": "/gg_react_take_home/index.html",
+    "precache-manifest.003cc1a8dd15c0289a971864907f832a.js": "/gg_react_take_home/precache-manifest.003cc1a8dd15c0289a971864907f832a.js",
+    "service-worker.js": "/gg_react_take_home/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/gg_react_take_home/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.95bc8d7d.chunk.css.map": "/gg_react_take_home/static/css/main.95bc8d7d.chunk.css.map",
+    "static/js/2.d2c0dd0b.chunk.js.LICENSE.txt": "/gg_react_take_home/static/js/2.d2c0dd0b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.42d4d1f8.js",
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.d2c0dd0b.chunk.js",
+    "static/css/main.95bc8d7d.chunk.css",
+    "static/js/main.68d0f31b.chunk.js"
+  ]
+}
