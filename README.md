@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# giphy_search
 
-## Available Scripts
+This project is a simple implementation of "giphy gifs browser". It comes with some basic features like trending page, search component and favorites. It uses basic Giphy API, so for full deploy you need to generate giphy api key (you can do this at [this page](https://developers.giphy.com/))
 
-In the project directory, you can run:
+### running locally
 
-### `npm start`
+To run this project locally, all you have to do is change configuration in .env file, and provide your own **APIKey**:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    REACT_APP_API_KEY=JhchPz8vYFWE8wE3r3RHCcnVa2EGusXe
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+and simple npm create-react-app stuff:
 
-### `npm test`
+    npm install
+    npm start
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It will host host on port 3000, as every CRA does.
+You can also change your **basename**:
 
-### `npm run build`
+    REACT_APP_BASE_NAME=/gg_react_take_home
+It will start on your basename
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### decisions, trade-offs and so on
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Project is divided in three main elements:
+- pages: simple views presented to end user - every page has own route configured in react-router.
+- components: elements used in pages - like ImageGrid or GiphTile
+- customhooks: hooks used to query Giphy API.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Project is react-hooks only React (maybe some CRA default elements are classes, but I don't see a reason to change them). It uses some custom hooks that are created specifficaly to run on giphy API. My goal with hooks was to not repeat myself in similar components that are downloading giphs from API. With custom hooks I could just create a ImageGridComponent, that I used in pages with custom hooks for querying the API, and just pass the result to the Component.
 
-### `npm run eject`
+Favorites are stored in localStorage - of course for more "production like" application this should be stored in some kind of API.
+I use HashRouter because of Github pages lack of proper url-rewrite policy. Normally I would use standard BrowserRouter.
+There are little tests - if I had some more time, I would definetely write more tests. I also have many other ideas for this application, like grouping favorites, copying clean gif url (not a "giphy" one), and copying GIF Image to clipboard directly and so on. It was very very fun project to work on :)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### deployment
+Project can be deployed to github pages. As a matter of fact it is deployed and hosted on [this address](https://tmkryb.github.io/gg_react_take_home/#/).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you want to publish it on your github pages, just fork this repo, change homepage in package.json, and run:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    npm run deploy
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Page should be deployed as your github page.

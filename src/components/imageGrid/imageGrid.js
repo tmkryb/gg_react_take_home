@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import ReactLoading from 'react-loading';
 import { GiphTile } from '../../components/giphTile/giphTile';

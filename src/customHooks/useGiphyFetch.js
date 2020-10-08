@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export function useGiphyFetch(url, method, defaultResult) {
     const [giphyBaseUrl] = useState("https://api.giphy.com/v1");
-    const [gihpyApiKey] = useState("JhchPz8vYFWE8wE3r3RHCcnVa2EGusXe");
+    const [gihpyApiKey] = useState(process.env.REACT_APP_API_KEY);
     const [isLoading, setIsLoading] = useState(false);
     const [result, setResult] = useState(defaultResult);
     const [error, setError] = useState(null);

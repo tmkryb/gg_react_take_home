@@ -7,9 +7,9 @@ import { FaSearch } from 'react-icons/fa'
 export function MainPage() {
     return (
         <>
-            <HashRouter basename={process.env.REACT_APP_BASE_URL}>
+            <HashRouter basename={process.env.REACT_APP_BASE_NAME}>
                 <Navbar>
-                    <NavbarBrand href={process.env.REACT_APP_BASE_URL}>giphy_search!</NavbarBrand>
+                    <NavbarBrand href={process.env.REACT_APP_BASE_NAME}>giphy_search!</NavbarBrand>
                     <Nav className="mr-auto">
                         <NavItem>
                             <NavLink><Link to="/trending/"><FiTrendingUp></FiTrendingUp> Trending</Link></NavLink>

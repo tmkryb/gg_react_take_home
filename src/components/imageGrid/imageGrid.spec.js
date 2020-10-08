@@ -24,7 +24,6 @@ describe("Test images render", () => {
 
 describe("Test modal with details show", () => {
     it("Tests if modal show on tile click", () => {
-
         let giphs = [
             { id: "1", images: { fixed_width_downsampled: { width: '100px', height: '100px', url: 'http://testhost/testUrl1' }, original: { width: '100px', height: '100px', url: 'http://testhost/testUrl1' } } },
             { id: "2", images: { fixed_width_downsampled: { width: '100px', height: '100px', url: 'http://testhost/testUrl2' }, original: { width: '100px', height: '100px', url: 'http://testhost/testUrl1' } } },
