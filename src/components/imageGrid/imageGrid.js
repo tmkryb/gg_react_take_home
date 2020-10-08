@@ -21,7 +21,7 @@ export function ImageGrid({ giphs, isLoadingGifs }) {
                     <h1>Upss... can't find any giphs.</h1>
                 </div>}
             <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 550: 2, 750: 3, 950: 4, 1150: 5, 1350: 6 }}>
-                <Masonry gutter={4}>
+                <Masonry gutter={'4'}>
                     {giphs.map(giph =>
                         <GiphTile giph={giph} key={giph.id} tileClicked={(id) => {showGiph(id)}} giphImage={giph.images.fixed_width_downsampled}></GiphTile>
                     )}

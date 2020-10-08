@@ -28,7 +28,7 @@ export function GiphTile({ giphImage, giph, tileClicked, title }) {
 
     return (
         <>
-            <Card key={giph.id} onMouseLeave={() => {
+            <Card className="giph-tile-card" key={giph.id} onMouseLeave={() => {
                 setMouseOverTile(false);
             }} onMouseOverCapture={() => {
                 setMouseOverTile(true);
